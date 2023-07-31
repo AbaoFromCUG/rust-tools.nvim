@@ -1,5 +1,5 @@
 -- main module file
-local module = require("plugin_name.module")
+-- local module = require("plugin_name.module")
 
 ---@class Config
 ---@field opt string Your config option
@@ -21,7 +21,7 @@ M.setup = function(args)
 end
 
 M.hello = function()
-  module.my_first_function()
+  -- module.my_first_function()
 end
 
 return M
