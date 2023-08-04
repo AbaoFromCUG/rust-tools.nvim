@@ -1,14 +1,29 @@
 # Another rustaceans' tool for neovim
 
-## Intergrate
+# Intergrate
 
-#### overseer
+## overseer.nvim
+No need any config, simple add configuration to you `.vscode/tasks.json`
 
-- [x] Support vscode-style task type: `cargo`
-- [ ] Disable builtin `cargo` template provider
-- [ ] Support `cargo` template provider: workspace/--bin
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cargo",
+            "command": "build",
+            "args": [
+                "--package",
+                "app"
+            ],
+            "label": "build desktop"
+        }
+    ]
+}
 
-### dap
+```
+
+## intergrater.nvim
 - [ ] Support `${command:cargo.xxx}` command variables
 
 

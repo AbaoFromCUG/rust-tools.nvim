@@ -1,5 +1,5 @@
 local M = {}
 
-function M.cargo() end
+function M.select_target() end
 
 return M

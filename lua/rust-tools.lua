@@ -1,27 +1,23 @@
 -- main module file
 -- local module = require("plugin_name.module")
 
----@class Config
----@field opt string Your config option
-local config = {
-  opt = "Hello!",
+---@class rust-tools.Config
+---@field command? boolean Your config option
+
+---@type rust-tools.Config
+local default_config = {
+  command = true,
 }
 
----@class MyModule
 local M = {}
 
----@type Config
-M.config = config
+---@param args? rust-tools.Config
+function M.setup(args)
+  args = args or {}
+  M.config = vim.tbl_deep_extend("force", default_config, args or {})
 
----@param args Config?
--- you can define your setup function here. Usually configurations can be merged, accepting outside params and
--- you can also put some validation here for those.
-M.setup = function(args)
-  M.config = vim.tbl_deep_extend("force", M.config, args or {})
-end
-
-M.hello = function()
-  -- module.my_first_function()
+  if M.config.command then
+  end
 end
 
 return M
