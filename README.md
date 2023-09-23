@@ -2,6 +2,19 @@
 
 # Intergrate
 
+
+## rust-analyzer
+
+You can configuration rust-analyzer link vscode, full configurable regard to https://rust-analyzer.github.io/manual.html#configuration
+
+`.vscode/settings.json`
+```json
+{
+    "rust-analyzer.cargo.target": "wasm32-unknown-unknown"
+}
+```
+
+
 ## overseer.nvim
 No need any config, simple add configuration to you `.vscode/tasks.json`
 
@@ -22,8 +35,4 @@ No need any config, simple add configuration to you `.vscode/tasks.json`
 }
 
 ```
-
-## intergrater.nvim
-- [ ] Support `${command:cargo.xxx}` command variables
-
 
